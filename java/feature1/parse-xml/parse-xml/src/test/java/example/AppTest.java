@@ -1,4 +1,4 @@
-package java-private-feature;
+package example;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
