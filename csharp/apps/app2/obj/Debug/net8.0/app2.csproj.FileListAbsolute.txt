@@ -1,0 +1,15 @@
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/bin/Debug/net8.0/app2
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/bin/Debug/net8.0/app2.deps.json
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/bin/Debug/net8.0/app2.runtimeconfig.json
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/bin/Debug/net8.0/app2.dll
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/bin/Debug/net8.0/app2.pdb
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/obj/Debug/net8.0/app2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/obj/Debug/net8.0/app2.AssemblyInfoInputs.cache
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/obj/Debug/net8.0/app2.AssemblyInfo.cs
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/obj/Debug/net8.0/app2.csproj.CoreCompileInputs.cache
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/obj/Debug/net8.0/app2.sourcelink.json
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/obj/Debug/net8.0/app2.dll
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/obj/Debug/net8.0/refint/app2.dll
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/obj/Debug/net8.0/app2.pdb
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/obj/Debug/net8.0/app2.genruntimeconfig.cache
+/Users/yoichiikegawa/Documents/Github/software/csharp/apps/app2/obj/Debug/net8.0/ref/app2.dll
