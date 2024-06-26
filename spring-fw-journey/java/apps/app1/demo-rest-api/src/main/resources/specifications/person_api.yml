@@ -1,0 +1,20 @@
+openapi: 3.0.3
+info:
+  title: "Person Information API"
+  version: "1.0.0"
+servers:
+  - url: http://localhost:8080
+paths: 
+  /api/person/{id}:
+    get:
+      summary: Get a person info by ID
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Numeric ID of the person to get
+      tags:
+        - person
+      operationId: getPerson
