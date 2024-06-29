@@ -1,0 +1,230 @@
+openapi: 3.0.3
+info:
+  title: "Student API"
+  description: API for Access to Students Information Resources.
+  version: "1.0.0"
+
+servers:
+  - url: http://localhost:8080
+    description: Server for Development.
+  - url: https://example.api.com/v1
+    description: Server for Production.
+
+paths: 
+   /api/v1/students/{studentId}:
+     get:
+       parameters:
+         - in: path
+           name: studentId
+           required: true
+           schema:
+             type: integer
+             minimum: 1
+           description: The student ID
+       tags:
+         - students
+       summary: Get student by ID(with Path Parameter).
+       description: Return a student model.
+       responses:
+         '200':
+            description: a student model
+            content:
+              application/json:
+                schema:
+                  type: object
+                  items:
+                    $ref: '#/components/schemas/Student'
+                  example:
+                    id: 1
+                    name: Scott Hamilton
+                    age: 14
+                    grade: middle
+                    class: 3
+                    country: England
+
+   /api/v1/students/search?name={name}&age={age}&country={country}:
+     get:
+       parameters:
+         - in: query
+           name: name
+           required: true
+           schema:
+             type: string
+           description: The Name of Student
+         - in: query
+           name: age
+           required: false
+           schema:
+             type: integer
+             minimum: 4
+             maximum: 18
+           description: The Age of Student
+         - in: query
+           name: country
+           required: false
+           schema:
+             type: string
+           description: The Country Name of Student
+       tags:
+         - students
+       summary: Get student by name and age and country
+       description: Return array of student model
+       responses:
+         '200':
+           description: array of student
+           content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Student'
+
+   /api/v1/students/search?id={studentId}:
+     get:
+       parameters:
+         - in: query
+           name: studentId
+           required: true
+           schema:
+             type: integer
+             minimum: 1
+           description: The student ID
+       tags:
+         - students
+       summary: Get student by ID(with Query Parameter).
+       description: Return a student model.
+       responses:
+         '200':
+            description: a student model
+            content:
+              application/json:
+                schema:
+                  type: object
+                  items:
+                    $ref: '#/components/schemas/Student'
+                  example:
+                    id: 1
+                    name: Scott Hamilton
+                    age: 14
+                    grade: middle
+                    class: 3
+                    country: England
+
+   /api/v1/students/search/grade/{grade}/class/{class}:
+     get:
+       parameters:
+         - in: path
+           name: grade
+           required: true
+           schema:
+             type: string
+             default: elementary
+           description: The grade name
+         - in: path
+           name: class
+           required: true
+           schema:
+             type: integer
+             minimum: 1
+             maximum: 6
+           description: The class Number
+       tags:
+         - students
+       summary: Get group of students Information that group by grade and class
+       description: Return array of students
+       responses:
+         '200':
+           description: Array of Student Model
+           content:
+             application/json:
+               schema:
+                 type: array
+                 items:
+                   oneOf:
+                     - $ref: '#/components/schemas/Student'
+
+   /api/v1/students/search/all?grade={grade}&class={class}:
+     get:
+        parameters:
+          - in: query
+            name: grade
+            required: true
+            schema:
+              type: string
+              default: elementary
+            description: The student ID
+          - in: query
+            name: class
+            required: false
+            schema:
+              type: integer
+              minimum: 1
+              maximum: 6
+            description: The class Number
+        tags:
+          - students
+        summary: Get group of students Information that group by grade and class
+        description: Return array of students
+        responses:
+          '200':
+            description: Array of Student Model
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    oneOf:
+                      - $ref: '#/components/schemas/Student'
+
+   /api/v1/students:
+     post:
+       tags:
+         - students
+       summary: Add a student
+       description: Return HTTP status code.
+       requestBody:
+         required: true
+         content:
+           application/json:
+             schema:
+               type: object
+               items:
+                 $ref: '#/components/schemas/Student'
+               example:
+                 id: 1
+                 name: Satoshi Ono
+                 age: 15
+                 grade: elementary
+                 class: 1
+                 country: Japan
+       responses:
+         '201':
+           description: Created
+
+components:
+  schemas:
+    Student:
+      type: object
+      required:
+        - id
+        - name
+        - age
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        age:
+          type: integer
+          format: int64
+        grade:
+          type: string
+        class:
+          type: integer
+          format: int64
+        country:
+          type: string
+
+
+  
