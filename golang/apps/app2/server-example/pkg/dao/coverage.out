@@ -1,0 +1,6 @@
+mode: set
+server-example/pkg/dao/file.go:8.50,12.16 3 1
+server-example/pkg/dao/file.go:12.16,14.3 1 1
+server-example/pkg/dao/file.go:15.2,16.16 2 1
+server-example/pkg/dao/file.go:16.16,18.3 1 0
+server-example/pkg/dao/file.go:19.2,19.19 1 1
