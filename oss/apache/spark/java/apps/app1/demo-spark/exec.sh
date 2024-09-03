@@ -1,0 +1,1 @@
+./spark-submit --master local[3] --executor-memory 512m --class com.example.spark.WordCount ~/tools/jars/demo-spark-0.0.1-SNAPSHOT.jar
